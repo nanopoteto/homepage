@@ -6,7 +6,7 @@ Homepage::Application.routes.draw do
 
 post '/projects/:project_id/tasks/:id/toggle' => 'tasks#toggle'
 
-  root 'projects#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
