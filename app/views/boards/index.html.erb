@@ -1,0 +1,8 @@
+<h1> 2ch のクローン的なやつ　</h1>
+<p><%= link_to "スレッド新規作成", "/boards/new" %></p>
+<hr>
+
+<%  @boards.each do |board|  %>
+ <%= link_to board.title, "/boards/#{board.id}" %> <br>
+
+ <% end %>

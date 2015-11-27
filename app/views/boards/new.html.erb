@@ -1,0 +1,12 @@
+<%= link_to "スレッド一覧へもどる", boards_path %>
+
+<hr>
+<h1>New Boards</hi>
+
+<%= form_tag "/boards", method: :post do %>
+
+ タイトル: <%= text_field_tag :title %> <br>
+ 作成者名: <%= text_field_tag :editor %> <br>
+
+ <%= submit_tag '投稿' %>
+ <% end %>
