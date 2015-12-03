@@ -1,5 +1,10 @@
 Homepage::Application.routes.draw do
 
+  resources :fan_comments
+  resources :reviews
+  resources :authors
+  resources :users
+  resources :books
   resources :projects do
     resources :tasks, only: [:create, :destroy]
   end
