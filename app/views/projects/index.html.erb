@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.6667, user-scalable=0;">
 <h1>Projects</h1>
 
 <ul>
@@ -7,8 +8,7 @@
 <%= link_to project.title, project_path(project.id)  %> (<%= project.tasks.unfinished.count %>)/(<%= project.tasks.count %>)
 <%= link_to "[Edit]", edit_project_path(project.id) %>
 <%= link_to "[Delete]", project_path(project.id), method: :delete, data: {confirm: "Are you sure?" }  %>
-
-
+<%= link_to "[Reload]", project_reload_path(project.id) %>
 </li>
 <%end%>
 </ul>

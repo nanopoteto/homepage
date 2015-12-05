@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.6667, user-scalable=0;">
+
 <h1>
  <%= @project.title %>
   </h1>
@@ -9,14 +11,12 @@
  
 <%= check_box_tag  ' ', ' ' , task.done, {'data-id' => task.id , 'data-project_id' =>task.project_id } %>
 <%= task.title %>
-<%= link_to "delete", project_task_path(task.project_id, task.id),  method: :delete , data: {confirm: "are you sure?"} %>
 
+<%= link_to "delete", project_task_path(task.project_id, task.id),  method: :delete , data: {confirm: "are you sure?"} %>
 </li>
 
+
 <%end%>
-
-
-
 
 <li>
 	<%= form_for [@project, @project.tasks.build] do |f| %>
@@ -27,6 +27,8 @@
 	<% end %>
 
 </li>
+
+
  </ul>
 
 <%= link_to "Home" ,projects_path %>
@@ -37,5 +39,6 @@ $(function() {
 		$.post('/projects/'+$(this).data('project_id')+'/tasks/'+$(this).data('id')+'/toggle/');
 	});
 })
+
 
  </script>

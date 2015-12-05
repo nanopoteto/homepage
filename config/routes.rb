@@ -1,15 +1,14 @@
 Homepage::Application.routes.draw do
 
-  resources :fan_comments
-  resources :reviews
-  resources :authors
-  resources :users
   resources :books
   resources :projects do
     resources :tasks, only: [:create, :destroy]
+  get :reload
   end
 
 post '/projects/:project_id/tasks/:id/toggle' => 'tasks#toggle'
+
+
 
 resources :boards do
   resources :comments, only: [:create, :destroy]

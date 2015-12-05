@@ -25,6 +25,7 @@ def toggle
 	@task.save
 end
 
+ 
 
 private
 
