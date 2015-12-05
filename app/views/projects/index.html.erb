@@ -3,13 +3,14 @@
 
 <ul>
 <% @projects.each do |project| %>
-
+<div class="title">
 <li>
 <%= link_to project.title, project_path(project.id)  %> (<%= project.tasks.unfinished.count %>)/(<%= project.tasks.count %>)
 <%= link_to "[Edit]", edit_project_path(project.id) %>
 <%= link_to "[Delete]", project_path(project.id), method: :delete, data: {confirm: "Are you sure?" }  %>
 <%= link_to "[Reload]", project_reload_path(project.id) %>
 </li>
+</div>
 <%end%>
 </ul>
 

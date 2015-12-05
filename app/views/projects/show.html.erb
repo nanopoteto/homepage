@@ -8,11 +8,14 @@
  <ul>
 <% @project.tasks.each do |task| %>
 <li>
- 
+ <div class="title">
 <%= check_box_tag  ' ', ' ' , task.done, {'data-id' => task.id , 'data-project_id' =>task.project_id } %>
+
 <%= task.title %>
 
 <%= link_to "delete", project_task_path(task.project_id, task.id),  method: :delete , data: {confirm: "are you sure?"} %>
+
+</div>
 </li>
 
 
