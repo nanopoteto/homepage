@@ -20,10 +20,11 @@ class BoardsController < ApplicationController
    		end
 	end
 
-	def show
-		@board = Board.includes(:comments).find(params[:id])
-		@comment = Comment.new
-	end
+
+        def show
+                @board = Board.find(params[:id])
+            	     @comment = Comment.new
+    	   end
 
 	def update
 		@board = Board.find(params[:id])

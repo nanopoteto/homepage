@@ -5,9 +5,8 @@ class CreateComments < ActiveRecord::Migration
       t.string :name
       t.text :content
 
+ t.index :board_id
       t.timestamps null: false
-
-      t.index :board_id
     end
   end
 end

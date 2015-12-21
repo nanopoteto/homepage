@@ -1,6 +1,5 @@
 Homepage::Application.routes.draw do
 
-  resources :books
   resources :projects do
     resources :tasks, only: [:create, :destroy]
   get :reload

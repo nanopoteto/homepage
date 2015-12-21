@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203035202) do
+ActiveRecord::Schema.define(version: 20151221075019) do
 
   create_table "authors", force: :cascade do |t|
     t.integer  "user_id"

@@ -23,11 +23,10 @@
 <% end %>
 </div>
 <hr>
-<%= form_for @comment, url: board_comments_path(@board, @comment)  do |f| %>
- 名前: <%= f.text_field :name %> <br>
- コメント: <%= f.text_area :content %>  <br>
-
- <%= f.submit %>
-<% end %>
+ 	<%= form_for @comment, url: board_comments_path(@board, @comment) do |f| %>
+	 	名前: <%= f.text_field :name %> <br>
+	 	コメント: <%= f.text_area :content %> <br>
+	 	<%= f.submit %>
+	 <% end %>
 </div>
 </div>
